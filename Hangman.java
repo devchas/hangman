@@ -58,8 +58,8 @@ public class Hangman extends ConsoleProgram {
     }
     
 /* Gets guess from the user */
-    private char getGuess() {
-    	return (char) readInt("Your guess: ");
+    private String getGuess() {
+    	return readLine("Your guess: ");
     }
     
 /**
@@ -67,13 +67,24 @@ public class Hangman extends ConsoleProgram {
  * @param guess Raw guess
  * @return Cleaned guess
  */
-    private char validateGuess(char guess) {
-    	if (!Character.isLetter(guess)) {
-    		println(guess + " is not a valid entry.");
-    		return validateGuess(getGuess());
+    private char validateGuess(String guess) {
+    	if (guess.length() == 1) {
+    		char cGuess = guess.charAt(0);
+	    	if (!Character.isLetter(cGuess)) {
+	    		inValidGuess(guess);
+	    		return validateGuess(getGuess());
+	    	} else {
+	    		return Character.toUpperCase(cGuess);
+	    	}
     	} else {
-    		return Character.toUpperCase(guess);
+    		inValidGuess(guess);
+    		return validateGuess(getGuess());
     	}
+    }
+    
+/* Returns error message to user if invalid entry */
+    private void inValidGuess(String guess) {
+    	println(guess + " is not a valid entry.");
     }
     
 /**
