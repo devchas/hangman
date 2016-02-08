@@ -17,7 +17,7 @@ public class Hangman extends ConsoleProgram {
 	private static final int MAXGUESS = 8;
 	
 	public void run() {
-    	initWord();
+		initWord();
 		println("Welcome to Hangman!");
 		while (true) {
 			if (isGameOver()) break;
@@ -39,7 +39,10 @@ public class Hangman extends ConsoleProgram {
     
 /* Sets word from a given list */
     private void setWord() {
-    	
+    	RandomGenerator rgen = RandomGenerator.getInstance();
+    	HangmanLexicon lex = new HangmanLexicon();
+    	int r = rgen.nextInt(0, lex.getWordCount() - 1);
+    	word = lex.getWord(r);
     }
     
 /* Converts the words to a string of dashes with len = to word len */
