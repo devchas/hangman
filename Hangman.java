@@ -69,6 +69,7 @@ public class Hangman extends ConsoleProgram {
  */
     private char validateGuess(char guess) {
     	if (!Character.isLetter(guess)) {
+    		println(guess + " is not a valid entry.");
     		return validateGuess(getGuess());
     	} else {
     		return Character.toUpperCase(guess);
