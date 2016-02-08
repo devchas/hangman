@@ -13,10 +13,11 @@ import java.awt.*;
 
 public class Hangman extends ConsoleProgram {
 
-    private static final int MAXGUESS = 8;
+/** Max number of allowed guesses by user */
+	private static final int MAXGUESS = 8;
 	
 	public void run() {
-    	init();
+    	initWord();
 		println("Welcome to Hangman!");
 		while (true) {
 			if (isGameOver()) break;
@@ -31,7 +32,7 @@ public class Hangman extends ConsoleProgram {
 	}
     
 /* Sets words from list and sets the current status of the word as all dashes */
-    private void init() {
+    private void initWord() {
     	setWord();
     	setWordStatus();
     }
