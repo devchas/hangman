@@ -21,7 +21,6 @@ public class Hangman extends ConsoleProgram {
 		println("Welcome to Hangman!");
 		while (true) {
 			if (isGameOver()) break;
-			println("The word now looks like this: " + wordStatus);
 			processGuess();
 		}
 		if (isWinner) {
@@ -89,8 +88,18 @@ public class Hangman extends ConsoleProgram {
     			inWord = true;
     		}
     	}
+    	updateStatus(inWord, guess);
     	return inWord;
     }
+    
+private void updateStatus(boolean isCorrect, char guess) {
+	if (isCorrect) {
+		println("That guess is correct.");
+	} else {
+		println("There are no " + guess + "'s in the word.");
+	}
+	println("The word now looks like this: " + wordStatus);
+}
     
 /**
  * Replaces dashes in word for correct letter
