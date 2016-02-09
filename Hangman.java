@@ -136,6 +136,7 @@ private void updateStatus(boolean isCorrect, char guess) {
  */
     private void setWrongGuesses(char guess) {
     	guessCnt++;
+    	canvas.noteIncorrectGuess(guess);
     }
     
 /* Returns true if game is over, else false */
