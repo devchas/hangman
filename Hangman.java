@@ -157,5 +157,5 @@ private void updateStatus(boolean isCorrect, char guess) {
     private String wordStatus = "";
     private String wrongGuesses = "";
     private int guessCnt = 0;
-    public HangmanCanvas canvas;
+    private HangmanCanvas canvas;
 }
