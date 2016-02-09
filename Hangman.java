@@ -17,7 +17,7 @@ public class Hangman extends ConsoleProgram {
 	private static final int MAXGUESS = 8;
 	
 	public void run() {
-		initWord();
+		init();
 		println("Welcome to Hangman!");
 		while (true) {
 			if (isGameOver()) break;
@@ -31,7 +31,7 @@ public class Hangman extends ConsoleProgram {
 	}
     
 /* Sets words from list and sets the current status of the word as all dashes */
-    private void initWord() {
+    public void init() {
     	setWord();
     	setWordStatus();
     }
@@ -151,4 +151,5 @@ private void updateStatus(boolean isCorrect, char guess) {
     private String wordStatus = "";
     private String wrongGuesses = "";
     private int guessCnt = 0;
+    private HangmanCanvas canvas;
 }
