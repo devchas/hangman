@@ -7,10 +7,6 @@
 import acm.graphics.*;
 
 public class HangmanCanvas extends GCanvas {
-
-	public void init() {
-		private static final int WIDTH = getWidth();
-	}
 	
 /** Resets the display so that only the scaffold appears */
 	public void reset() {
