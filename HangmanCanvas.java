@@ -8,6 +8,11 @@ import acm.graphics.*;
 
 public class HangmanCanvas extends GCanvas {
 
+/** Width and height of application window in pixels */
+	public static final int APPLICATION_WIDTH = 1500;
+	public static final int APPLICATION_HEIGHT = 1200;
+	
+	
 /** Resets the display so that only the scaffold appears */
 	public void reset() {
 		removeAll();
@@ -53,9 +58,5 @@ public class HangmanCanvas extends GCanvas {
 	private static final int HIP_WIDTH = 36;
 	private static final int LEG_LENGTH = 108;
 	private static final int FOOT_LENGTH = 28;
-	
-	/** Width and height of application window in pixels */
-	public static final int APPLICATION_WIDTH = 1500;
-	public static final int APPLICATION_HEIGHT = 1200;
 
 }
