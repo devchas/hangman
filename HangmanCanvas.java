@@ -33,7 +33,7 @@ public class HangmanCanvas extends GCanvas {
  * guesses that appears at the bottom of the window.
  */
 	public void noteIncorrectGuess(char letter) {
-		updList();
+		updWrongGuesses();
 		wrongCnt++;
 		switch (wrongCnt) {
 		case 1: showHead(); break;
@@ -45,11 +45,15 @@ public class HangmanCanvas extends GCanvas {
 		case 7: showLeftFoot(); break;
 		case 8: showRightFoot(); break;
 		}
-		
+	}
+	
+	public void updWrongGuesses() {
+		wrongGuesses += guess;
 	}
 
 	private int x, y;
 	private int wrongCnt = 0;
+	private String wrongGuesses = "";
 	
 /* Constants for the simple version of the picture (in pixels) */
 	private static final int SCAFFOLD_HEIGHT = 360;
