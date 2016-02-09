@@ -113,6 +113,7 @@ public class Hangman extends ConsoleProgram {
 private void updateStatus(boolean isCorrect, char guess) {
 	if (isCorrect) {
 		println("That guess is correct.");
+		canvas.displayWord(word);
 	} else {
 		println("There are no " + guess + "'s in the word.");
 	}
