@@ -15,9 +15,9 @@ public class HangmanCanvas extends GCanvas {
 		y = (getHeight() - SCAFFOLD_HEIGHT) / 2;
 		add(new GLine(x, y, x, y + SCAFFOLD_HEIGHT));
 		add(new GLine(x + BEAM_LENGTH, y, x, y));
-		statusLabel = new GLabel("Test", x - 20, y + SCAFFOLD_HEIGHT + 20);
+		statusLabel = new GLabel("Test", x - 20, y + SCAFFOLD_HEIGHT + WORD_BUFFER);
 		add(statusLabel);
-		wrongLabel = new GLabel("Test", x - 20, y + SCAFFOLD_HEIGHT + 40);
+		wrongLabel = new GLabel("Test", x - 20, y + SCAFFOLD_HEIGHT + WRONG_BUFFER);
 		add(wrongLabel);
 	}
 
@@ -73,8 +73,6 @@ public class HangmanCanvas extends GCanvas {
 	private static final int HIP_WIDTH = 36;
 	private static final int LEG_LENGTH = 108;
 	private static final int FOOT_LENGTH = 28;
-	public static final int APPLICATION_HEIGHT = 1200;
-	
-
-
+	private static final int WORD_BUFFER = 20;
+	private static final int WRONG_BUFFER = 40;
 }
