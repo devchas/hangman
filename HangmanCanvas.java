@@ -47,8 +47,8 @@ public class HangmanCanvas extends GCanvas {
 		case 5: showLeftLeg(); break;
 		case 6: showRightLeg(); break;
 		case 7: showLeftFoot(); break;
-		case 8: showRightFoot(); break;*/
-		}
+		case 8: showRightFoot(); break;
+		}*/
 	}
 	
 	public void updWrongGuesses() {
