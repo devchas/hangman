@@ -15,6 +15,8 @@ public class HangmanCanvas extends GCanvas {
 		y = (getHeight() - SCAFFOLD_HEIGHT) / 2;
 		add(new GLine(x, y, x, y + SCAFFOLD_HEIGHT));
 		add(new GLine(x + BEAM_LENGTH, y, x, y));
+		statusLabel = new GLabel("Test", x - 20, y + SCAFFOLD_HEIGHT + 20);
+		wrongLabel = new GLabel("Test", x - 20, y + SCAFFOLD_HEIGHT + 40);
 	}
 
 /**
@@ -54,6 +56,8 @@ public class HangmanCanvas extends GCanvas {
 	private int x, y;
 	private int wrongCnt = 0;
 	private String wrongGuesses = "";
+	private GLabel statusLabel;
+	private GLabel wrongLabel;
 	
 /* Constants for the simple version of the picture (in pixels) */
 	private static final int SCAFFOLD_HEIGHT = 360;
