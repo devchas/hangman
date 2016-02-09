@@ -51,7 +51,11 @@ public class HangmanCanvas extends GCanvas {
 		}*/
 	}
 	
-	public void updWrongGuesses(char letter) {
+	private void showHead() {
+		
+	}
+	
+	private void updWrongGuesses(char letter) {
 		wrongGuesses += letter;
 		wrongLabel.setLabel(wrongGuesses);
 	}
