@@ -37,7 +37,7 @@ public class HangmanCanvas extends GCanvas {
  * guesses that appears at the bottom of the window.
  */
 	public void noteIncorrectGuess(char letter) {
-		updWrongGuesses();
+		updWrongGuesses(letter);
 		wrongCnt++;
 		/*switch (wrongCnt) {
 		case 1: showHead(); break;
@@ -51,8 +51,8 @@ public class HangmanCanvas extends GCanvas {
 		}*/
 	}
 	
-	public void updWrongGuesses() {
-		wrongGuesses += guess;
+	public void updWrongGuesses(char letter) {
+		wrongGuesses += letter;
 		wrongLabel.setLabel(wrongGuesses);
 	}
 
