@@ -17,7 +17,7 @@ public class Hangman extends ConsoleProgram {
 	private static final int MAXGUESS = 8;
 	
 	public void run() {
-		init();
+		initGame();
 		println("Welcome to Hangman!");
 		while (true) {
 			if (isGameOver()) break;
@@ -35,6 +35,9 @@ public class Hangman extends ConsoleProgram {
     	canvas = new HangmanCanvas();
     	add(canvas);
     	canvas.reset();
+    }
+    
+    private void initGame() {
     	setWord();
     	setWordStatus();
     }
