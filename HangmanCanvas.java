@@ -10,7 +10,13 @@ public class HangmanCanvas extends GCanvas {
 
 /** Resets the display so that only the scaffold appears */
 	public void reset() {
-		/* You fill this in */
+		int imgWidth = BEAM_LENGTH + UPPER_ARM_LENGTH / 2;
+		x = (getWidth() - imgWidth) / 2;
+		y = (getHeight() - SCAFFOLD_HEIGHT);
+		GLine scaffold = new GLine(x, x, y, y + SCAFFOLD_HEIGHT);
+		add(scaffold);
+		GLine beam = new GLine(x, x + BEAM_LENGTH, y, y);
+		add(beam);
 	}
 
 /**
@@ -29,9 +35,11 @@ public class HangmanCanvas extends GCanvas {
  * guesses that appears at the bottom of the window.
  */
 	public void noteIncorrectGuess(char letter) {
-		/* You fill this in */
+		
 	}
 
+	private int x, y;
+	
 /* Constants for the simple version of the picture (in pixels) */
 	private static final int SCAFFOLD_HEIGHT = 360;
 	private static final int BEAM_LENGTH = 144;
