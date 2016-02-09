@@ -12,7 +12,7 @@ public class HangmanCanvas extends GCanvas {
 	public void reset() {
 		removeAll();
 		x = getWidth() / 2 + BEAM_LENGTH;
-		y = (getHeight() - SCAFFOLD_HEIGHT) / 2;
+		y = (getHeight() - SCAFFOLD_HEIGHT) / 2	+ 100;
 		add(new GLine(x, y, x, y + SCAFFOLD_HEIGHT));
 		add(new GLine(x + BEAM_LENGTH, y, x, y));
 		GRect rect = new GRect(0, 0, 50, 50);
