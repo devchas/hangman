@@ -60,7 +60,7 @@ public class Hangman extends ConsoleProgram {
 /* Gets guess from user and updates word status, guess, list, graphic */
     private void processGuess() {
     	char guess = validateGuess(getGuess());
-    	if (!guessInWord(guess)) setWrongGuesses(guess);
+    	guessInWord(guess);
     }
     
 /* Gets guess from the user */
