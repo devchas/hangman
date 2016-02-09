@@ -27,7 +27,7 @@ public class HangmanCanvas extends GCanvas {
  * been guessed so far; unguessed letters are indicated by hyphens.
  */
 	public void displayWord(String word) {
-		/* You fill this in */
+		statusLabel.setLabel(word);
 	}
 
 /**
@@ -39,7 +39,7 @@ public class HangmanCanvas extends GCanvas {
 	public void noteIncorrectGuess(char letter) {
 		updWrongGuesses();
 		wrongCnt++;
-		switch (wrongCnt) {
+		/*switch (wrongCnt) {
 		case 1: showHead(); break;
 		case 2: showBody(); break;
 		case 3: showLeftArm(); break;
@@ -47,7 +47,7 @@ public class HangmanCanvas extends GCanvas {
 		case 5: showLeftLeg(); break;
 		case 6: showRightLeg(); break;
 		case 7: showLeftFoot(); break;
-		case 8: showRightFoot(); break;
+		case 8: showRightFoot(); break;*/
 		}
 	}
 	
