@@ -15,7 +15,7 @@ public class HangmanCanvas extends GCanvas {
 		y = (getHeight() - SCAFFOLD_HEIGHT) / 2	+ 200;
 		add(new GLine(x, y, x, y + SCAFFOLD_HEIGHT));
 		add(new GLine(x + BEAM_LENGTH, y, x, y));
-		GRect rect = new GRect(50, 50, getWidth(), 50);
+		GRect rect = new GRect(50, 50, width, 50);
 		rect.setFilled(true);
 		add(rect);
 	}
@@ -40,6 +40,7 @@ public class HangmanCanvas extends GCanvas {
 	}
 
 	private int x, y;
+	private int width = getWidth();
 	
 /* Constants for the simple version of the picture (in pixels) */
 	private static final int SCAFFOLD_HEIGHT = 360;
