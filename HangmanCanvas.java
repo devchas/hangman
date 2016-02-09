@@ -53,6 +53,7 @@ public class HangmanCanvas extends GCanvas {
 	
 	public void updWrongGuesses() {
 		wrongGuesses += guess;
+		wrongLabel.setLabel(wrongGuesses);
 	}
 
 	private int x, y;
