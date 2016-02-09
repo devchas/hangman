@@ -11,7 +11,6 @@ public class HangmanCanvas extends GCanvas {
 /** Resets the display so that only the scaffold appears */
 	public void reset() {
 		this.setVisible(true);
-		isPreferredSizeSet(true);
 		removeAll();
 		x = getWidth() / 2 + BEAM_LENGTH;
 		y = (getHeight() - SCAFFOLD_HEIGHT) / 2	+ 200;
