@@ -16,7 +16,9 @@ public class HangmanCanvas extends GCanvas {
 		add(new GLine(x, y, x, y + SCAFFOLD_HEIGHT));
 		add(new GLine(x + BEAM_LENGTH, y, x, y));
 		statusLabel = new GLabel("Test", x - 20, y + SCAFFOLD_HEIGHT + 20);
+		add(statusLabel);
 		wrongLabel = new GLabel("Test", x - 20, y + SCAFFOLD_HEIGHT + 40);
+		add(wrongLabel);
 	}
 
 /**
