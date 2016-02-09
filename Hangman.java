@@ -33,8 +33,8 @@ public class Hangman extends ConsoleProgram {
 /* Sets words from list and sets the current status of the word as all dashes */
     public void init() {
     	canvas = new HangmanCanvas();
-    	canvas.setVisible(true);
     	add(canvas);
+    	canvas.setVisible(true);
     	canvas.reset();
     }
     
