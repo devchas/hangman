@@ -8,6 +8,10 @@ import acm.graphics.*;
 
 public class HangmanCanvas extends GCanvas {
 
+	public void init() {
+		private static final int WIDTH = getWidth();
+	}
+	
 /** Resets the display so that only the scaffold appears */
 	public void reset() {
 		removeAll();
@@ -40,7 +44,6 @@ public class HangmanCanvas extends GCanvas {
 	}
 
 	private int x, y;
-	private int width = getWidth();
 	
 /* Constants for the simple version of the picture (in pixels) */
 	private static final int SCAFFOLD_HEIGHT = 360;
