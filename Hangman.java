@@ -10,6 +10,7 @@ import acm.program.*;
 import acm.util.*;
 
 import java.awt.*;
+import java.util.ArrayList;
 
 public class Hangman extends ConsoleProgram {
 
@@ -46,8 +47,10 @@ public class Hangman extends ConsoleProgram {
     private void setWord() {
     	RandomGenerator rgen = RandomGenerator.getInstance();
     	HangmanLexicon lex = new HangmanLexicon();
-    	int r = rgen.nextInt(0, lex.getWordCount() - 1);
-    	word = lex.getWord(r);
+    	ArrayList<String> lexList = lex.getLexList();
+    	int size = lexList.size();
+    	int r = rgen.nextInt(0, size - 1);
+    	word = lexList.get(r);
     }
     
 /* Converts the words to a string of dashes with len = to word len */
