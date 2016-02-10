@@ -41,7 +41,7 @@ public class Hangman extends ConsoleProgram {
 			init();
 			run();
 		} else {
-			playAgain)();
+			playAgain();
 		}
 	}
     
