@@ -38,7 +38,6 @@ public class Hangman extends ConsoleProgram {
 		if (again.equals("Y") || again.equals("y")) {
 			guessCnt = 0;
 			wordStatus = "";
-			init();
 			run();
 		} else {
 			playAgain();
