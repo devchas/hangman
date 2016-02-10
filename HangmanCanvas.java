@@ -52,7 +52,7 @@ public class HangmanCanvas extends GCanvas {
 	}
 	
 	private void showHead() {
-		
+		add(new GOval(getWidth() / 2 - HEAD_RADIUS , y + ROPE_LENGTH, HEAD_RADIUS * 2, HEAD_RADIUS * 2));
 	}
 	
 	private void showBody() {
