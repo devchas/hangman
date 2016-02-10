@@ -7,11 +7,29 @@
 
 import acm.util.*;
 
+import java.io.*;
+import java.util.ArrayList;
+
 public class HangmanLexicon {
 
 
     public HangmanLexicon() {
-    	
+    	ArrayList<String> lexList = new ArrayList<String>();
+    	try {
+			BufferedReader rd = new BufferedReader(new FileReader("HangmanLexicon.txt"));
+			while (true) {
+				String line = rd.readLine();
+				if (line == null) break;
+				lexList.add(line);
+			}
+			rd.close();
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
     }	
 	
     
