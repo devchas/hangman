@@ -30,6 +30,10 @@ public class Hangman extends ConsoleProgram {
 			println("You lose.");
 			println("The word was " + word + ".");
 		}
+		String again = readLine("Press Y to play again.");
+		if (again.equals("Y") || again.equals("y")) {
+			run();
+		}
 	}
     
 /* Sets words from list and sets the current status of the word as all dashes */
