@@ -14,7 +14,6 @@ public class HangmanLexicon {
 
 
     public HangmanLexicon() {
-    	ArrayList<String> lexList = new ArrayList<String>();
     	try {
 			BufferedReader rd = new BufferedReader(new FileReader("HangmanLexicon.txt"));
 			while (true) {
@@ -30,7 +29,11 @@ public class HangmanLexicon {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-    }	
+    }
+    
+    private ArrayList<String> getLexList() {
+    	return lexList;
+    }
 	
     
 /** Returns the number of words in the lexicon. */
@@ -54,4 +57,6 @@ public class HangmanLexicon {
 			default: throw new ErrorException("getWord: Illegal index");
 		}
 	};
+	
+	private ArrayList<String> lexList = new ArrayList<String>();
 }
