@@ -31,7 +31,7 @@ public class HangmanLexicon {
 		}
     }
     
-    private ArrayList<String> getLexList() {
+    public ArrayList<String> getLexList() {
     	return lexList;
     }
 	
