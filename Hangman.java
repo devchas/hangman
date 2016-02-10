@@ -28,6 +28,7 @@ public class Hangman extends ConsoleProgram {
 			println("You win");
 		} else {
 			println("You lose.");
+			println("The word was " + word + ".");
 		}
 	}
     
