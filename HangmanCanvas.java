@@ -57,7 +57,8 @@ public class HangmanCanvas extends GCanvas {
 	}
 	
 	private void showBody() {
-		
+		int y1 = y + ROPE_LENGTH + HEAD_RADIUS * 2;
+		add(new GLine(getWidth() / 2, y1, getWidth() / 2, y1 + BODY_LENGTH));
 	}
 	
 	private void showLeftArm() {
