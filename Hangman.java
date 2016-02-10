@@ -30,12 +30,18 @@ public class Hangman extends ConsoleProgram {
 			println("You lose.");
 			println("The word was " + word + ".");
 		}
+		playAgain();
+	}
+	
+	private void playAgain() {
 		String again = readLine("Press Y to play again.");
 		if (again.equals("Y") || again.equals("y")) {
 			guessCnt = 0;
 			wordStatus = "";
 			init();
 			run();
+		} else {
+			playAgain)();
 		}
 	}
     
