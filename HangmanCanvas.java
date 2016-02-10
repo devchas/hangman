@@ -94,11 +94,18 @@ public class HangmanCanvas extends GCanvas {
 	}
 	
 	private void showLeftFoot() {
-		
+		int x1 = getWidth() / 2 - HIP_WIDTH;
+		int x2 = x1 - LEG_LENGTH;
 	}
 	
 	private void showRightFoot() {
-		
+		int x1 = getWidth() / 2 + HIP_WIDTH;
+		int x2 = x1 + LEG_LENGTH;	
+	}
+	
+	private void showFoot(int x1, int x2) {
+		int y1 = y + ROPE_LENGTH + HEAD_RADIUS * 2 + BODY_LENGTH + LEG_LENGTH;
+		add(new GLine(x1, y1, x2, y1));
 	}
 	
 	
