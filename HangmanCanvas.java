@@ -21,8 +21,8 @@ public class HangmanCanvas extends GCanvas {
 		statusLabel = new GLabel("", x - 20, y + SCAFFOLD_HEIGHT + WORD_BUFFER);
 		statusLabel.setFont("SansSerif-Bold-18");
 		add(statusLabel);
-		wrongLabel.setFont("SansSerif-Bold-18");
 		wrongLabel = new GLabel("", x - 20, y + SCAFFOLD_HEIGHT + WRONG_BUFFER);
+		wrongLabel.setFont("SansSerif-Bold-18");
 		add(wrongLabel);
 	}
 
