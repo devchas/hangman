@@ -19,7 +19,9 @@ public class HangmanCanvas extends GCanvas {
 		add(new GLine(x + BEAM_LENGTH, y, x, y));
 		add(new GLine(getWidth() / 2, y, getWidth() / 2, y + ROPE_LENGTH));
 		statusLabel = new GLabel("", x - 20, y + SCAFFOLD_HEIGHT + WORD_BUFFER);
+		statusLabel.setFont("SansSerif-Bold-18");
 		add(statusLabel);
+		wrongLabel.setFont("SansSerif-Bold-18");
 		wrongLabel = new GLabel("", x - 20, y + SCAFFOLD_HEIGHT + WRONG_BUFFER);
 		add(wrongLabel);
 	}
