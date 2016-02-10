@@ -39,7 +39,7 @@ public class HangmanCanvas extends GCanvas {
 	public void noteIncorrectGuess(char letter) {
 		updWrongGuesses(letter);
 		wrongCnt++;
-		/*switch (wrongCnt) {
+		switch (wrongCnt) {
 		case 1: showHead(); break;
 		case 2: showBody(); break;
 		case 3: showLeftArm(); break;
@@ -48,12 +48,42 @@ public class HangmanCanvas extends GCanvas {
 		case 6: showRightLeg(); break;
 		case 7: showLeftFoot(); break;
 		case 8: showRightFoot(); break;
-		}*/
+		}
 	}
 	
 	private void showHead() {
 		
 	}
+	
+	private void showBody() {
+		
+	}
+	
+	private void showLeftArm() {
+		
+	}
+	
+	private void showRightArm() {
+		
+	}
+	
+	private void showLeftLeg() {
+		
+	}
+	
+	private void showRightLeg() {
+		
+	}
+	
+	private void showLeftFoot() {
+		
+	}
+	
+	private void showRightFoot() {
+		
+	}
+	
+	
 	
 	private void updWrongGuesses(char letter) {
 		wrongGuesses += letter;
